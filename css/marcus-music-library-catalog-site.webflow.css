@@ -939,186 +939,6 @@ figcaption {
   margin-bottom: 20px;
 }
 
-.facts-gray-background {
-  background-color: #fafafa;
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.faq {
-  background-color: #fafafa;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 30px;
-  display: flex;
-}
-
-.container-questions {
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  margin: -30px -10px;
-  display: flex;
-}
-
-.question-block {
-  width: 50%;
-  margin: 30px 50px 30px 10px;
-}
-
-.container-facts-inner {
-  width: 25%;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-}
-
-.header-banner {
-  justify-content: center;
-  align-items: center;
-  margin-top: -120px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-}
-
-.about-intro {
-  justify-content: center;
-  align-items: center;
-  padding: 115px 30px 75px;
-  display: flex;
-}
-
-.goals-container {
-  align-items: flex-start;
-  margin-left: -10px;
-  margin-right: -10px;
-  display: flex;
-}
-
-.goals-container-inner {
-  width: 33.3333%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.team {
-  justify-content: center;
-  align-items: center;
-  padding: 120px 30px;
-  display: flex;
-}
-
-.collection-list-2 {
-  margin: -10px;
-}
-
-.team-member {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.team-inner-container {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
-}
-
-.team-avatar {
-  width: 100%;
-  height: 100%;
-}
-
-.team-member-info {
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  padding: 20px 30px 10px;
-  display: flex;
-}
-
-.our-goals {
-  justify-content: center;
-  align-items: center;
-  padding: 120px 30px;
-  display: flex;
-}
-
-.blog-posts {
-  justify-content: center;
-  align-items: center;
-  margin-top: -120px;
-  margin-bottom: 120px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-}
-
-.blog-posts-item {
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: center;
-  align-items: stretch;
-  width: 33.3333%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-.post-list {
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: flex-start;
-  margin: -10px;
-  display: flex;
-}
-
-.blog-posts-item-container {
-  background-color: #fff;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
-}
-
-.post-info {
-  padding: 30px;
-}
-
-.post-date {
-  color: #000;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  font-family: IBM Plex Mono, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-.header-blog {
-  justify-content: center;
-  align-items: center;
-  margin-top: -90px;
-  padding-top: 90px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  position: relative;
-}
-
 .header-image {
   z-index: 1;
   max-width: 1440px;
@@ -1381,15 +1201,15 @@ figcaption {
 
 .section.song-cards {
   display: flex;
-  flex-direction: row; /* Use column if you want the cards to stack vertically */
-  flex-wrap: wrap; /* This will allow items to wrap to the next line */
+  flex-direction: row; 
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  gap: 30px; /* This sets both row-gap and column-gap */
+  gap: 30px; 
   margin-top: 20px;
   padding-right: 130px;
   min-height: 345px;
-  overflow: auto; /* Allows scrolling if the content overflows */
+  overflow: auto; 
 }
 
 
