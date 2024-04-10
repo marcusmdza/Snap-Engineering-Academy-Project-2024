@@ -1,3 +1,14 @@
+/* Song Data Structure 
+    {
+        image: 'path/to/image.jpg',
+        title: 'Song Title',
+        album: 'Album Name',
+        artist: 'Artist Name',
+        length: 'Song Length',
+        genre: 'Music Genre'
+    }
+*/
+
 const songs = [
     {
         image: "images/songs/intro-ariana-grande.jpg",
@@ -481,167 +492,165 @@ const songs = [
     },
     
   ];
-  
-  // function to create song card HTML element
-  function createSongCard(song) {
+
+// function to create song card HTML element
+function createSongCard(song) {
     return `
       <div class="song-card">
-        <img src="${song.image}" loading="lazy" sizes="225px" class="song-cover-img">
+        <img src="${song.image}" class="song-cover-img">
         <div class="song-card-text song-title">${song.title}</div>
         <div class="song-card-text song-album">${song.album}</div>
         <div class="song-card-text song-artist">${song.artist}</div>
         <div class="song-card-text song-length">${song.length}</div>
       </div>
     `;
-  }
-  
-  function renderSongs(songs) {
+}
+
+// function to render the songs
+function renderSongs(songs) {
     // find the container for the song cards
     const container = document.querySelector('.section.song-cards');
     // clear any existing content
     container.innerHTML = '';
     // create HTML for each song and append to the container
     songs.forEach(song => {
-      container.innerHTML += createSongCard(song);
+        container.innerHTML += createSongCard(song);
     });
-  }
-  
+}
+
 let sortState = 'none'; // song title sorting
 let albumSortState = 'none'; // album sorting
 
 // song title sort function
 function sortSongs(songs, state) {
-  let sortedSongs = [...songs]; // Create a shallow copy to avoid mutating the original array
-  if (state === 'ascending') {
-    sortedSongs.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (state === 'descending') {
-    sortedSongs.sort((a, b) => b.title.localeCompare(a.title));
-  }
-  return sortedSongs;
+    let sortedSongs = [...songs]; // create a shallow copy to avoid mutating the original array
+    if (state === 'ascending') {
+        sortedSongs.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (state === 'descending') {
+        sortedSongs.sort((a, b) => b.title.localeCompare(a.title));
+    }
+    return sortedSongs;
 }
 
 // song album sort function
 function sortAlbums(songs, state) {
     let sortedSongs = [...songs]; // Create a shallow copy to avoid mutating the original array
     if (state === 'ascending') {
-      sortedSongs.sort((a, b) => a.album.localeCompare(b.album));
+        sortedSongs.sort((a, b) => a.album.localeCompare(b.album));
     } else if (state === 'descending') {
-      sortedSongs.sort((a, b) => b.album.localeCompare(a.album));
+        sortedSongs.sort((a, b) => b.album.localeCompare(a.album));
     }
     return sortedSongs;
-  }
-  
+}
+
 
 // re-render song function
 function updateSortAndRender() {
     const titleButton = document.querySelector('.catalog-title-button');
-    const albumButton = document.getElementById('album-button'); 
+    const albumButton = document.getElementById('album-button');
 
-  
     // rotate through the sort states and update the button text
     switch (sortState) {
-      case 'none':
-        sortState = 'ascending';
-        titleButton.textContent = 'Title ▲';
-        albumButton.textContent = 'Album ';
-        break;
-      case 'ascending':
-        sortState = 'descending';
-        titleButton.textContent = 'Title ▼';
-        albumButton.textContent = 'Album ';
-        break;
-      case 'descending':
-        sortState = 'none';
-        titleButton.textContent = 'Title';
-        albumButton.textContent = 'Album ';
-        break;
+        case 'none':
+            sortState = 'ascending';
+            titleButton.textContent = 'Title ▲';
+            albumButton.textContent = 'Album ';
+            break;
+        case 'ascending':
+            sortState = 'descending';
+            titleButton.textContent = 'Title ▼';
+            albumButton.textContent = 'Album ';
+            break;
+        case 'descending':
+            sortState = 'none';
+            titleButton.textContent = 'Title';
+            albumButton.textContent = 'Album ';
+            break;
     }
-  
+
     // sort and re-render songs
     const sortedSongs = sortSongs(songs, sortState);
     renderSongs(sortedSongs);
-  }
+}
 
 // re-render songs based on album sorting
 function updateAlbumSortAndRender() {
-    const albumButton = document.getElementById('album-button'); 
+    const albumButton = document.getElementById('album-button');
     const titleButton = document.querySelector('.catalog-title-button');
 
-  
     switch (albumSortState) {
-      case 'none':
-        albumSortState = 'ascending';
-        albumButton.textContent = 'Album ▲';
-        titleButton.textContent = 'Title';
-        break;
-      case 'ascending':
-        albumSortState = 'descending';
-        albumButton.textContent = 'Album ▼';
-        titleButton.textContent = 'Title';
-        break;
-      case 'descending':
-        albumSortState = 'none';
-        albumButton.textContent = 'Album ';
-        titleButton.textContent = 'Title';
-        break;
+        case 'none':
+            albumSortState = 'ascending';
+            albumButton.textContent = 'Album ▲';
+            titleButton.textContent = 'Title';
+            break;
+        case 'ascending':
+            albumSortState = 'descending';
+            albumButton.textContent = 'Album ▼';
+            titleButton.textContent = 'Title';
+            break;
+        case 'descending':
+            albumSortState = 'none';
+            albumButton.textContent = 'Album ';
+            titleButton.textContent = 'Title';
+            break;
     }
-  
+
     // sort and re-render songs based on the album
     const sortedSongs = sortAlbums(songs, albumSortState);
     renderSongs(sortedSongs);
-  }
-  
-  function filterByGenre(genre) {
+}
+
+function filterByGenre(genre) {
     const filteredSongs = songs.filter(song => song.genre === genre);
     renderSongs(filteredSongs);
-  }
-  
-  // search bar function:
-  document.addEventListener('DOMContentLoaded', () => {
+}
+
+// search bar function:
+document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('Search-Bar-Catalog');
     const searchIcon = document.querySelector('.image-5');
-  
-    // Function to filter and render the song cards based on the search input
+
+    //  filter and render the song cards based on the search input
     function filterSongs() {
-      const searchTerm = searchInput.value.toLowerCase();
-      const filteredSongs = songs.filter(song => song.title.toLowerCase().includes(searchTerm));
-      renderSongs(filteredSongs);
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredSongs = songs.filter(song => song.title.toLowerCase().includes(searchTerm));
+        renderSongs(filteredSongs);
     }
-  
-    // Event listener for the search input
+
+    // listener for the search input
     searchInput.addEventListener('input', filterSongs);
-  
-    // Event listener for the search icon click
+
+    // listener for the search icon click
     searchIcon.addEventListener('click', filterSongs);
-  
-    // Event listener for pressing 'Enter' key within the search input
+
+    // event listener for pressing 'Enter' key within the search input
     searchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault(); // Prevent the default form submit action
-        filterSongs();
-      }
+        if (e.key === 'Enter') {
+            e.preventDefault(); // prevent the default form submit action
+            filterSongs();
+        }
     });
-  
-    // Initial render
-    renderSongs(songs);
-  });  
 
-  // event listener for genre buttons
-  document.querySelectorAll('.genre-button').forEach(button => {
+    // initial render
+    renderSongs(songs);
+});
+
+// event listener for genre buttons
+document.querySelectorAll('.genre-button').forEach(button => {
     button.addEventListener('click', () => {
-      const genre = button.id; // use the button's ID as the genre to filter by
-      filterByGenre(genre);
+        const genre = button.id; // use the button's ID as the genre to filter by
+        filterByGenre(genre);
     });
-  });
-  
+});
 
-  // event listeners for the song and album buttons
-  document.querySelector('.catalog-title-button').addEventListener('click', updateSortAndRender);
-  document.getElementById('album-button').addEventListener('click', updateAlbumSortAndRender);
-  document.getElementById('Show All').addEventListener('click', () => {
+
+// event listeners for the song and album buttons
+document.querySelector('.catalog-title-button').addEventListener('click', updateSortAndRender);
+document.getElementById('album-button').addEventListener('click', updateAlbumSortAndRender);
+document.getElementById('Show All').addEventListener('click', () => {
     renderSongs(songs);
-  });
-  
-  // first render
-  document.addEventListener('DOMContentLoaded', () => renderSongs(songs));
-  
+});
+
+// first render
+document.addEventListener('DOMContentLoaded', () => renderSongs(songs));

@@ -1,6 +1,6 @@
 # Music Catalog Website
 
-This repository contains the code for a dynamic Music Catalog Website that allows users to view and interact with a collection of songs.
+Hi there! 👋 Welcome to my project for the Snap Engineering Academy 2024. This repository contains the code for my dynamic Music Catalog website project that allows users to view and interact with a collection of songs. Currently, the songs in this project are based off my own music. I hope you enjoy my project!
 
 ## Features
 
@@ -31,3 +31,10 @@ The songs are represented as objects within an array. Here's an example structur
   length: 'Song Length',
   genre: 'Music Genre'
 }
+
+## Resources & Credit
+
+- For overall design I used [Canva](https://www.canva.com/design/DAGBreXa514/cYIVHY8FonPr8om_veIrUw/view?mode=prototype) to plan out my website. Spotify was used a lot as a reference for the project.
+- Once I had the design, I used webflow to get a basic understanding of the HTML structure, and used some of their CSS themes.
+- One resource I used a lot is [w3schools] (https://www.w3schools.com/js/js_htmldom_eventlistener.asp) for the Javascript.
+
