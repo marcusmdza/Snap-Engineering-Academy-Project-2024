@@ -490,7 +490,38 @@ const songs = [
         length: "3:39",
         genre: "Happy"
     },
-    
+    {
+        image: "images/songs/never.jpg",
+        title: "Let Me Go",
+        album: "NEVER ENOUGH",
+        artist: "Daniel Caesar",
+        length: "3:37",
+        genre: "Sad"
+    },
+    {
+        image: "images/songs/never.jpg",
+        title: "Superpowers",
+        album: "NEVER ENOUGH",
+        artist: "Daniel Caesar",
+        length: "2:55",
+        genre: "Sad"
+    },
+    {
+        image: "images/songs/lets_start.jpg",
+        title: "drive ME crazy!",
+        album: "Let's Start Here.",
+        artist: "Lil Yachty",
+        length: "3:50",
+        genre: "Happy"
+    },
+    {
+        image: "images/songs/no_one.jpg",
+        title: "No One Knows",
+        album: "A.M. Paradox",
+        artist: "Brent Faiyaz",
+        length: "4:31",
+        genre: "R&B"
+    },
   ];
 
 // function to create song card HTML element
