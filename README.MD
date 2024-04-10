@@ -31,10 +31,11 @@ The songs are represented as objects within an array. Here's an example structur
   length: 'Song Length',
   genre: 'Music Genre'
 }
+```
 
 ## Resources & Credit
 
 - For overall design I used [Canva](https://www.canva.com/design/DAGBreXa514/cYIVHY8FonPr8om_veIrUw/view?mode=prototype) to plan out my website. Spotify was used a lot as a reference for the project.
 - Once I had the design, I used webflow to get a basic understanding of the HTML structure, and used some of their CSS themes.
-- One resource I used a lot is [w3schools] (https://www.w3schools.com/js/js_htmldom_eventlistener.asp) for the Javascript.
+- One resource I used a lot is [w3schools] (https://www.w3schools.com/js/js_htmldom_eventlistener.asp) for the Javascript, and HTML/CSS styling.
 
