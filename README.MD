@@ -1,6 +1,8 @@
 # Music Catalog Website
 
-Hi there! 👋 Welcome to my project for the Snap Engineering Academy 2024. This repository contains the code for my dynamic Music Catalog website project that allows users to view and interact with a collection of songs. Currently, the songs in this project are based off my own music. I hope you enjoy my project!
+Hi there! 👋 Welcome to my project for the Snap Engineering Academy 2024. This repository contains the code for my dynamic Music Catalog website project that allows users to view and interact with a collection of songs. Currently, the songs in this project are based off my own music. I hope you enjoy my project! 
+
+You can visit [my project here](https://marcusmdza.github.io/Snap-Engineering-Academy-Project-2024/).
 
 ## Features
 
